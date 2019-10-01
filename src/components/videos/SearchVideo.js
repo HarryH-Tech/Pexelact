@@ -1,45 +1,45 @@
 import React, {useState, useContext } from 'react';
-import PexelContext from '../context/PexelContext';
+import PexelContext from '../../context/PexelContext';
 
-
-const Search = () => {
+const SearchVideo = () => {
 	const pexelContext = useContext(PexelContext);
-	const [query, setQuery] = useState('');
+	const [videoQuery, setVideoQuery] = useState('');
 	
 	const onSubmit = (e) => {
 		e.preventDefault();
-		if(query === '') {
+		if(videoQuery === '') {
 			alert("Please enter something to search for :)");
 		}
 		else {
-			pexelContext.searchPhotos(query);
+			pexelContext.searchVideos(videoQuery);
 		}
 	}
 	
 	const handleSearchInput = (e) => {
-		setQuery(e.target.value);
+		setVideoQuery(e.target.value);
 	}
+	
 	
 	return (
 		<>
-		<div className="card">
+		
 				<form onSubmit={onSubmit}>
 					<input 
 						type="text"
-						value={query}
+						value={videoQuery}
 						onChange={handleSearchInput}
-						autoFocus
+						className="option-input"
 					/>
 					<br />
 					<br />
 					<input
 						type="submit"
-						value="Search Photo"
+						value="Search Videos"
+						className="btn btn-primary"
 					/>
 				</form>
-		</div>
 		</>
 	)
 }
 
-export default Search;
+export default SearchVideo;

@@ -5,9 +5,13 @@ const Navbar = () => {
 	
 	return (
 		<>
-			<nav>
-				<h1> Navbar </h1>
-			</nav>
+		<nav className="navbar bg-primary justify-content-center">
+			  <ul className="navbar-nav">
+
+				<h1 style={{color: 'white'}}> Pexelact </h1>
+			  
+			  </ul>
+		</nav>				
 
 		</>
 	)

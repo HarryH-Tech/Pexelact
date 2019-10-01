@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
+import PexelContext from '../../context/PexelContext';
 import Photo from './Photo';
-import PexelContext from '../context/PexelContext';
 
 
 const SearchedPhotos = () => {
@@ -9,7 +9,7 @@ const SearchedPhotos = () => {
 
 	return (
 		<>
-			<div style={photoGrid}>
+			<div className="media-grid">
 				{photos.map(photo => (
 					<Photo key={photo.id} photo={photo} />
 				))}
@@ -19,14 +19,6 @@ const SearchedPhotos = () => {
 	)
 }
 
-const photoGrid = {		
-	display: 'grid',
-	gridTemplateColumns: 'repeat(3, 1fr)',
-	gridGap: '10px',
-	justifyContent: 'center',
-	width: '95%',
-	margin: 'auto'
-}
 
 export default SearchedPhotos;
 
