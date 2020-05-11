@@ -43,7 +43,6 @@ const PexelState = (props) => {
         payload: data.photos,
       });
     } else if (!data.photos.length) {
-      console.log("error");
       dispatch({
         type: SET_ERROR,
         payload: true,
@@ -67,7 +66,6 @@ const PexelState = (props) => {
       }),
     });
     const data = await res.json();
-    console.log(data.videos);
 
     if (data.videos.length) {
       dispatch({
@@ -75,7 +73,6 @@ const PexelState = (props) => {
         payload: data.videos,
       });
     } else if (!data.videos.length) {
-      console.log("error");
       dispatch({
         type: SET_ERROR,
         payload: true,
@@ -99,7 +96,6 @@ const PexelState = (props) => {
       }),
     }).catch((err) => console.error("Error"));
     const data = await res.json();
-    console.log(data.photos[0]);
     dispatch({
       type: GET_RANDOM_PHOTO,
       payload: data.photos[0],

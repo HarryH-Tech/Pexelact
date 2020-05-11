@@ -2,13 +2,10 @@ import React, { useContext } from "react";
 import PexelContext from "../../context/PexelContext";
 import Photo from "./Photo";
 import Error from "../Error";
-import { spinner } from "../../spinner.gif";
 
 const SearchedPhotos = () => {
   const pexelContext = useContext(PexelContext);
   const { photos, error, loading } = pexelContext;
-
-  console.log(pexelContext);
 
   return (
     <>
@@ -28,8 +25,12 @@ const SearchedPhotos = () => {
 
       {loading && (
         <>
-          <img src={spinner} alt="Loading Spinner" />
-          HI
+          <img
+            src={
+              "https://i.pinimg.com/originals/f9/41/ae/f941ae9d16fd7d2957eea6e5b1100d1e.gif"
+            }
+            alt="Loading Spinner"
+          />
         </>
       )}
     </>

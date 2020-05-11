@@ -7,7 +7,6 @@ import {
 } from "./Types";
 
 export default (state, action) => {
-  console.log(action);
   switch (action.type) {
     case SEARCH_PHOTOS:
       return {
