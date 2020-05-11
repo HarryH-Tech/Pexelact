@@ -1,6 +1,6 @@
 <h1>Pexelact</h1>
 
-**This app allows the user to search for photos and videos from the Pexels API which can be found here: https://www.pexels.com/api. **
+**This app allows the user to search for photos and videos from the Pexels API which can be found here: https://www.pexels.com/api.**
 
 ![App Screenshot](/public/AppScreenshot.PNG)
 
